@@ -1,7 +1,6 @@
-module Nand_gate_bh(a,b,y);
+module nandgate_bh(a,b,y);
  input a,b;output y;
- reg y;
- wire [1:0]x;
+ reg y;wire[1:0]x;
  assign x={a,b};
  always@x
  begin
@@ -11,7 +10,7 @@ module Nand_gate_bh(a,b,y);
 endmodule
 module testbench_nandg;
  reg a,b;wire y;
- Nand_gate NandG(a,b,y);
+ nandgate_bh NandG(a,b,y);
  initial begin
   $display($time,"a=%b,b=%b,y=%b",a,b,y);
    #10 a=0;b=0;
