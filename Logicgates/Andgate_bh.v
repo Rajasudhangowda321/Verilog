@@ -1,7 +1,6 @@
-module and_bh(a,b,y);
+module andgate_bh(a,b,y);
  input a,b;output y;
- reg y;
- wire [1:0]x;
+ reg y;wire[1:0]x;
  assign x={a,b};
  always@x
  begin
@@ -11,7 +10,7 @@ module and_bh(a,b,y);
 endmodule
 module testbench_andg;
  reg c,d;wire z;
- and_gate AG(.a(c),.b(d),.y(z));
+ andgate_bh AG(.a(c),.b(d),.y(z));
  initial begin
    $monitor($time,"c=%b,d=%b,z=%b",c,d,z);
    #10 c=0;d=0;
