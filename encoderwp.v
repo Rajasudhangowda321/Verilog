@@ -1,4 +1,4 @@
-module encoder (i,d);
+module encoderwp (i,d);
 input [7:0]i;
 output [2:0]d;
 reg [2:0]d;
@@ -17,7 +17,7 @@ end
 endmodule 
 module encoderwp_tb;
 reg [7:0]i;wire [2:0]d;
-encoder e(.i(i),.d(d));
+encoderwp uut(.i(i),.d(d));
 initial begin
  #10 $monitor($time,"i=%b,d=%b",i,d);
  #10 i=8'b00000001;
